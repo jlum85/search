@@ -7,7 +7,7 @@ const uid2 = require("uid2");
 
 const User = require("../models/User");
 
-router.post("/user/signup", middlewares.authenticate, async (req, res) => {
+router.post("/user/signup", async (req, res) => {
   console.log("route signup");
   const { email, username, password } = req.fields;
   console.log("param recus", email, username, password);
