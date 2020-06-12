@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const Contact = mongoose.model("User", {
+const Contact = mongoose.model("Contact", {
   company: String,
   firstName: String,
   familyName: String,
