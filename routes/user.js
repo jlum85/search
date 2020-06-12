@@ -10,7 +10,6 @@ const User = require("../models/User");
 router.post("/user/signup", async (req, res) => {
   console.log("route signup");
   const { email, username, password } = req.fields;
-  console.log("param recus", email, username, password);
   // on crée un token
   const token = uid2(16);
   // on crée un salt
@@ -43,7 +42,6 @@ router.post("/user/signup", async (req, res) => {
 router.post("/user/signin", async (req, res) => {
   console.log("route log in");
   const { email, password } = req.fields;
-  console.log("param recus", email, password);
 
   try {
     const user = await User.findOne({ email: email });
